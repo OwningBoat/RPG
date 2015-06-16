@@ -6,13 +6,15 @@ TagManager:
   - Environment
   - Dialogue1
   - Dialogue2
-  - North
-  - East
-  - South
-  - West
+  - Floor2
+  - Floor3
+  - Floor4
+  - Floor1
   - GUIBattleAttackBtn
   - Combatant
   - CombatController
+  - Battle
+  - Enemy
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

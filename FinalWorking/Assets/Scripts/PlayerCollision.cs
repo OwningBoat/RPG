@@ -40,7 +40,7 @@ public class PlayerCollision : MonoBehaviour
 
 		if (showRays) 
 		{
-			drawRaycast();
+			//drawRaycast();
 		}
 	}
 
@@ -110,7 +110,7 @@ public class PlayerCollision : MonoBehaviour
 	}
 
 	//INCASE I'M DUMB I'LL USE THIS DEBUG.
-
+	/*
 	void drawRaycast()
 	{
 		//UPWARDS AND AWAYWARDS
@@ -129,7 +129,7 @@ public class PlayerCollision : MonoBehaviour
 		foreach (Ray rRight in raysRight) {
 			Debug.DrawRay(rRight.origin, rRight.direction * rayDistance, Color.red);
 		}
-	}
+	}*/
 
 
 	bool checkCollision(List<Ray> rayList)
