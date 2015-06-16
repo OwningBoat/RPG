@@ -31,7 +31,9 @@ public class GameplayManager : MonoBehaviour
 		Floor4,
 		Battle
     };
-
+	
+	Vector3 previousLocation;
+	GameState previousState;
     GameState currentState = GameState.Floor1;
 	
 	public Vector3 SpawnPosition { get; set; }
@@ -51,6 +53,26 @@ public class GameplayManager : MonoBehaviour
 			psMan.initializePlayer();
 		}
     }
+
+	public GameState getState() {
+		return currentState;
+	}
+	
+	public GameState getPreviousState() {
+		return previousState;
+	}
+	
+	public void setPreviousState(GameState oldState) {
+		previousState = oldState;
+	}
+	
+	public Vector3 getPreviousLocation() {
+		return previousLocation;
+	}
+	
+	public void setPreviousLocation(Vector3 OldLocation) {
+		previousLocation = OldLocation;
+	}
 
     public void ChangeState(GameState newState)
     {

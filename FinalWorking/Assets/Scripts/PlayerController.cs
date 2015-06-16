@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour {
 	bool moving = false;
 	bool battleArea;
 	int battle;
+	Vector3 previousPosition;
 
 	public GameObject talkNotifier;
 
@@ -75,6 +76,8 @@ public class PlayerController : MonoBehaviour {
 			battle = Random.Range (0, 100);
 			if (battle == 1)
 			{
+				GameplayManager.Instance.setPreviousLocation(transform.position);
+				GameplayManager.Instance.setPreviousState(GameplayManager.Instance.getState());
 				Debug.Log ("Battle!");
 				GameplayManager.Instance.SpawnPosition = Vector3.zero;
 				GameplayManager.Instance.ChangeState( GameplayManager.GameState.Battle );

@@ -89,7 +89,7 @@ GameObject:
   - 114: {fileID: 23505729}
   m_Layer: 5
   m_Name: PartyActor_2
-  m_TagString: Untagged
+  m_TagString: Combatant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faac43d4117cf1e47ba27555929be7e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controllerObject: {fileID: 0}
   enemy: 0
   timerProgress: 0
   timer: 500
@@ -991,7 +992,7 @@ GameObject:
   - 114: {fileID: 411079233}
   m_Layer: 5
   m_Name: PartyActor_1
-  m_TagString: Untagged
+  m_TagString: Combatant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1019,6 +1020,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faac43d4117cf1e47ba27555929be7e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controllerObject: {fileID: 0}
   enemy: 0
   timerProgress: 0
   timer: 500
@@ -1689,7 +1691,7 @@ GameObject:
   - 114: {fileID: 1357730091}
   m_Layer: 5
   m_Name: Enemy_2
-  m_TagString: Untagged
+  m_TagString: Combatant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1717,6 +1719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faac43d4117cf1e47ba27555929be7e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controllerObject: {fileID: 0}
   enemy: 1
   timerProgress: 0
   timer: 500
@@ -1810,7 +1813,7 @@ GameObject:
   - 114: {fileID: 1515193418}
   m_Layer: 5
   m_Name: PartyActor_3
-  m_TagString: Untagged
+  m_TagString: Combatant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1826,6 +1829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faac43d4117cf1e47ba27555929be7e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controllerObject: {fileID: 0}
   enemy: 0
   timerProgress: 0
   timer: 500
@@ -2306,7 +2310,7 @@ GameObject:
   - 114: {fileID: 1640496221}
   m_Layer: 5
   m_Name: Enemy_1
-  m_TagString: Untagged
+  m_TagString: Combatant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2334,6 +2338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faac43d4117cf1e47ba27555929be7e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controllerObject: {fileID: 0}
   enemy: 1
   timerProgress: 0
   timer: 500
@@ -2425,7 +2430,7 @@ GameObject:
   - 114: {fileID: 1681810792}
   m_Layer: 5
   m_Name: Enemy_3
-  m_TagString: Untagged
+  m_TagString: Combatant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2453,6 +2458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faac43d4117cf1e47ba27555929be7e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controllerObject: {fileID: 0}
   enemy: 1
   timerProgress: 0
   timer: 500

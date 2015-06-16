@@ -37,15 +37,16 @@ public class GUIBattleController : MonoBehaviour
     }
     
     void Update() {
-    	if (damaged) {
+    	//if (damaged) {
     		//Update current HP
-    		int playerID = 1;
+    		int playerID = 0;
     		foreach (GameObject timerBar in TimerBars) {
 				//Set the player HP
 				Text CurrentStatText = PartyStats[playerID].GetComponent<Text>();
 				CurrentStatText.text = GameplayManager.psMan.getPlayerHealth(playerID+1) + "/" + GameplayManager.psMan.getPlayerMaxHP(playerID+1);
+				playerID++;
     		}
-    		damaged = false;
-    	}
+    		//damaged = false;
+    	//}
     }
 }

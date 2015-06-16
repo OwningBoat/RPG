@@ -1,49 +1,37 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class CombatController : MonoBehaviour
 {
     // TODO: Fix variable assignments, otherwise script won't compile - AG 6/10/15
-    GameObject[] combatantList;
+    List<Combatant> enemyList = new List<Combatant>();
     bool turnPaused = false;
 
 	void Awake ()
     {
-        combatantList = GameObject.FindGameObjectsWithTag("Combatant");
-
+        GameObject[] combatantList = GameObject.FindGameObjectsWithTag("Combatant");
+		Debug.Log(combatantList.Length);
 		foreach (GameObject combatant in combatantList)
 		{
             Combatant unit = combatant.GetComponent<Combatant>();
-            unit.timerProgress = Random.Range(0, unit.timer);
+            if (unit.enemy) {
+            	Debug.Log("adding enemy " + unit);
+            	enemyList.Add(unit);
+            }
+		}
+	}
+	public void removeCombatant(Combatant combatant) {
+		Debug.Log ("removing enemy " + combatant);
+		enemyList.Remove(combatant);
+		if(enemyList.Count == 0) {
+			//WINNER
+			GameplayManager.Instance.SpawnPosition = GameplayManager.Instance.getPreviousLocation();
+			GameplayManager.Instance.ChangeState(GameplayManager.Instance.getPreviousState());
 		}
 	}
 	
-	public GameObject[] GetCombatantList() {
-		return combatantList;
+	public List<Combatant> GetEnemyList() {
+		return enemyList;
 	}
-		
-	// Update is called once per frame
-	void Update ()
-    {
-        if (!turnPaused)
-        {
-            foreach (GameObject combatant in combatantList)
-            {
-                Combatant unit = combatant.GetComponent<Combatant>();
-                unit.timerProgress += 1000 * Time.deltaTime;
-                if (unit.timerProgress >= unit.timer)
-                {
-                    turnPaused = true;
-                    Debug.Log("PAUSE");
-                    unit.DoAction();
-                }
-            }
-        }
-	}
-
-    public void ResumeCombat()
-    {
-        turnPaused = false;
-    }
-    
 }

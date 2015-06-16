@@ -16,7 +16,7 @@ public class PlayerStats {
 	float baseHP;
 	float baseDamage;
 	float baseDefense;
-	public float attackSpeed = 6;
+	public float attackSpeed = 16;
 	float globalStatGrowth = 3f;
 	float HPGrowth = 1;
 	float attackGrowth = 1;
