@@ -86,6 +86,8 @@ public class Combatant : MonoBehaviour
 					int playerID = Random.Range(1,GameplayManager.psMan.playerList.Count+1);
             		GameplayManager.psMan.addHealth(playerID,-10);
             		if(GameplayManager.psMan.getPlayerHealth(playerID) <= 0f) {
+						int healthCorrect = Mathf.RoundToInt(Mathf.Abs(GameplayManager.psMan.getPlayerHealth(playerID)));
+						GameplayManager.psMan.addHealth(playerID,healthCorrect);
             			Debug.Log(GameplayManager.psMan.getPlayerName(playerID) + " has died! :(");
             		}
             	} else {
