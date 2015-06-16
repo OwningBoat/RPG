@@ -3,18 +3,26 @@ using System.Collections;
 
 public class UIEvents : MonoBehaviour
 {
-    public void ChangeToWorldMode()
+    public void ChangeToWorldFloor1()
     {
-        GameplayManager.Instance.ChangeState( GameplayManager.GameState.WorldMode );
+        GameplayManager.Instance.ChangeState( GameplayManager.GameState.Floor1 );
     }
 
-    public void ChangeToTownMode()
+    public void ChangeToTownFloor2()
     {
-        GameplayManager.Instance.ChangeState( GameplayManager.GameState.TownMode );
+        GameplayManager.Instance.ChangeState( GameplayManager.GameState.Floor2 );
     }
 
-    public void ChangeToBattleMode()
+    public void ChangeToBattleFloor3()
     {
-        GameplayManager.Instance.ChangeState( GameplayManager.GameState.BattleMode );
+        GameplayManager.Instance.ChangeState( GameplayManager.GameState.Floor3 );
     }
+	public void ChangeToBattleFloor4()
+	{
+		GameplayManager.Instance.ChangeState( GameplayManager.GameState.Floor4 );
+	}
+	public void ChangeToBattle()
+	{
+		GameplayManager.Instance.ChangeState( GameplayManager.GameState.Battle );
+	}
 }

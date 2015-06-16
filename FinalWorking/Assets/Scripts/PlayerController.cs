@@ -73,10 +73,10 @@ public class PlayerController : MonoBehaviour {
 			talkNotifier.SetActive(true);
 		}
 		//SCENE CHANGE SCENE CHANGE SCENE CHANGE SCENE CHANGE SCENE CHANGE SCENE CHANGE SCENE CHANGE SCENE CHANGE SCENE CHANGE SCENE CHANGE
-		if (other.CompareTag("North"))
+		if (other.CompareTag("floor2"))
 		{
 			GameplayManager.Instance.SpawnPosition = Vector3.zero;
-			GameplayManager.Instance.ChangeState( GameplayManager.GameState.TownMode );
+			GameplayManager.Instance.ChangeState( GameplayManager.GameState.Floor2 );
 		}
 
 	}

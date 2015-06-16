@@ -20,12 +20,17 @@ public class GameplayManager : MonoBehaviour
 
     public enum GameState
     {
-        WorldMode,
-        TownMode,
-        BattleMode
+        //WorldMode,
+        //TownMode,
+        //BattleMode
+		Floor1,
+		Floor2,
+		Floor3,
+		Floor4,
+		Battle
     };
 
-    GameState currentState = GameState.WorldMode;
+    GameState currentState = GameState.Floor1;
 	
 	public Vector3 SpawnPosition { get; set; }
 
@@ -47,14 +52,20 @@ public class GameplayManager : MonoBehaviour
         currentState = newState;
         switch(currentState)
         {
-        case GameState.WorldMode:
-            Application.LoadLevel( "Final" ); //TestWorld - set to Final temp to test spawn location.
+        case GameState.Floor1:
+            Application.LoadLevel( "Floor1" ); //TestWorld - set to Final temp to test spawn location.
             break;
-        case GameState.TownMode:
-            Application.LoadLevel( "TestTown" );
+        case GameState.Floor2:
+            Application.LoadLevel( "Floor2" );
             break;
-        case GameState.BattleMode:
-            Application.LoadLevel( "TestBattle" );
+		case GameState.Floor3:
+			Application.LoadLevel( "Floor3" );
+			break;
+		case GameState.Floor4:
+			Application.LoadLevel( "Floor4" );
+			break;
+        case GameState.Battle:
+            Application.LoadLevel( "Battle" );
         break;
         }
     }
