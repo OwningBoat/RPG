@@ -4,16 +4,10 @@ using System.Collections;
 public class CombatController : MonoBehaviour
 {
     // TODO: Fix variable assignments, otherwise script won't compile - AG 6/10/15
-	/*ArrayList combatantList = new ArrayList();
-
-	public GameObject combatant01;
-	public GameObject combatant02;
-	public GameObject combatant03;*/
     GameObject[] combatantList;
     bool turnPaused = false;
 
-
-	void Start ()
+	void Awake ()
     {
         combatantList = GameObject.FindGameObjectsWithTag("Combatant");
 
@@ -24,6 +18,10 @@ public class CombatController : MonoBehaviour
 		}
 	}
 	
+	public GameObject[] GetCombatantList() {
+		return combatantList;
+	}
+		
 	// Update is called once per frame
 	void Update ()
     {

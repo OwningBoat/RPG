@@ -4,6 +4,7 @@ using System.Collections;
 public class GameplayManager : MonoBehaviour
 {
     private static GameplayManager instance = null;
+    public static PlayerStatsManager psMan = null;
     public static GameplayManager Instance
     {
         get
@@ -12,6 +13,7 @@ public class GameplayManager : MonoBehaviour
             {
                 GameObject go = new GameObject("GameplayManager");
                 instance = go.AddComponent<GameplayManager>();
+                psMan = go.AddComponent<PlayerStatsManager>();
                 DontDestroyOnLoad( go );
             }
             return instance;
@@ -39,12 +41,15 @@ public class GameplayManager : MonoBehaviour
         if (instance != null && instance != this)
         {
             Destroy( gameObject );
-        }
+        }        
     }
 
     void Start()
     {
         ChangeState( currentState );
+		for (int i = 0; i < 3; i++) {
+			psMan.initializePlayer();
+		}
     }
 
     public void ChangeState(GameState newState)

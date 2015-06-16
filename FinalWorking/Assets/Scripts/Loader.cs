@@ -6,6 +6,7 @@ namespace Completed
 	public class Loader : MonoBehaviour 
 	{
 		public GameObject gameManager;			// GameManager prefab to instantiate
+		public PlayerStatsManager playerStatsManager; //prefab to instantiate for stats
 
 		void Awake ()
 		{

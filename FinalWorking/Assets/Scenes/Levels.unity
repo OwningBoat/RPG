@@ -1437,7 +1437,7 @@ Camera:
     type: 2}
   m_PrefabInternal: {fileID: 2069227399}
   m_GameObject: {fileID: 1211735149}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
@@ -2066,6 +2066,10 @@ Prefab:
     - target: {fileID: 410916, guid: 926b0a531ce5dd64394d375fb8360407, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2010888, guid: 926b0a531ce5dd64394d375fb8360407, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 926b0a531ce5dd64394d375fb8360407, type: 2}

@@ -17,11 +17,11 @@ public class GUITimerManager : MonoBehaviour
 
     private float barFillAmount;
 
-	void Awake()
+	void Start()
     {
         Instance = this;
         Text_PartyTime = GetComponent<Text>();
-        Text_PartyTime.text = curTime.ToString() + " / " + maxTime.ToString();
+        Text_PartyTime.text = ((int)curTime).ToString() + " / " + maxTime.ToString();
         FillBar = FillBar.GetComponent<Image>();
     }
 
@@ -44,6 +44,6 @@ public class GUITimerManager : MonoBehaviour
         }
 
         FillBar.fillAmount = barFillAmount;
-        Text_PartyTime.text = curTime.ToString() + " / " + maxTime.ToString();
+		Text_PartyTime.text = ((int)curTime).ToString() + " / " + maxTime.ToString();
     }
 }

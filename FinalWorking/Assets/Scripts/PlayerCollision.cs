@@ -131,7 +131,6 @@ public class PlayerCollision : MonoBehaviour
 		}
 	}*/
 
-
 	bool checkCollision(List<Ray> rayList)
 	{
 		for (int i = 0; i < rayList.Count; i++)
